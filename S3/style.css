@@ -1,0 +1,99 @@
+body {
+	font-family: sans-serif;
+	font-weight: normal;
+	margin: 10px;
+	color: rgb(255, 255, 255);
+	
+	background-image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ27KFNuD1rQU8JfeWVayefj9yyiq-GxUchSg&usqp=CAU";
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+h2{
+	color: orchid;
+}
+
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: rgb(226, 191, 13);
+  font: 14px sans-serif;
+  text-anchor: end;
+}
+
+div {
+	clear: both;
+}
+
+label {
+  width: 200px;
+  border-radius: 3px;
+  border: 1px solid #a83f06
+}
+
+/* hide input */
+input[type="radio"]:empty {
+	position: absolute;
+	margin-left: -999px;
+}
+
+/* style label */
+input[type="radio"]:empty ~ label {
+	position: relative;
+	float: left;
+	left: calc(50% - 100px);
+	line-height: 2.5em;
+	text-indent: 3.25em;
+	margin-top: .5em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input[type="radio"]:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 2.5em;
+	background: #f3d807;
+	border-radius: 3px 0 0 3px;
+}
+
+/* toggle hover */
+input[type="radio"]:hover:not(:checked) ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #bc10df;
+}
+
+input[type="radio"]:hover:not(:checked) ~ label {
+	color: rgb(251, 21, 21);
+}
+
+/* toggle on */
+input[type="radio"]:checked ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #9CE2AE;
+	background-color: GREEN;
+}
+
+input[type="radio"]:checked ~ label {
+	color: rgb(218, 48, 48);
+}
+
+/* radio focus */
+input[type="radio"]:focus ~ label:before {
+	box-shadow: 0 0 0 3px rgb(229, 14, 14);
+}
+
+.center{
+    margin: auto;
+    width: 60%;
+}
